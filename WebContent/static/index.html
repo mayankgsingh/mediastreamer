@@ -1,0 +1,163 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- <link href="static/css/style.css" rel="stylesheet"> -->
+		
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/app_jquery.js"></script>
+		
+		<script type="text/javascript">
+		$(document).ready(function(){
+			//Init 1
+			$('.alert').hide();
+			
+			//Init 2
+			$("#txtSearch").keypress(function(event) {
+				if(event.which == 13) {
+					if($("#txtSearch").val() != "") {
+						searchTitle();
+					}
+				}
+			});
+			
+			//Init 3
+			$("#lnkSettings").click(function(event) {
+				$('#modal-settings-container').modal();
+			});
+		});
+		</script>
+	</head>
+	<body ng-controller="MediaSearchController">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-inverse" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button> <a class="navbar-brand" href="#">MediaServer</a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a id="lnkSettings" href="#mmodal-settings-container"><span class="glyphicon glyphicon-cog" data-toggle="modal"></span></a></li>
+								<li><a href="#">Guest <span class="glyphicon glyphicon-user"></span></a></li>
+							</ul>
+						</div>
+						
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-success alert-dismissable">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<span id="alertcontent">App loaded...</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Setting Modal Pop-up -->
+			<div class="modal fade" id="modal-settings-container" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								x
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								Scan Settings
+							</h4>
+						</div>
+						<div class="modal-body">
+							<button type="button" class="btn btn-default" onclick="rebuildIndex()">
+								Rebuild Index
+							</button>
+						</div>
+						<div class="modal-footer">
+							 
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								Close
+							</button> 
+							<!-- <button type="button" class="btn btn-primary">
+								Save changes
+							</button> -->
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			<!-- End Of Setting Modal Pop-up -->
+			
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12">
+							<form role="form" onsubmit="return false;">
+								<div class="form-group">
+									<input type="search" class="form-control" id="txtSearch" placeholder="Search..." />
+								</div>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								  <span aria-hidden="true">&times;</span>
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div id="mediasection">
+								<audio controls="controls" id="playcontrol" src="#">
+								  Your browser does not support the audio tag.
+								</audio>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<!-- <div class="col-md-3">
+							<div class="list-group">
+								 <a href="#" class="list-group-item active">Home</a>
+								<div class="list-group-item">
+									List header
+								</div>
+								<div class="list-group-item">
+									<h4 class="list-group-item-heading">
+										List group item heading
+									</h4>
+									<p class="list-group-item-text">
+										...
+									</p>
+								</div>
+								<div class="list-group-item">
+									<span class="badge">14</span>Help
+								</div> <a class="list-group-item active"><span class="badge">14</span>Help</a>
+							</div>
+						</div> -->
+						<div class="col-md-12">
+							<table class="table table-striped table-hover table-condensed" id="tblSearchRes">
+								<thead>
+									<tr>
+										<th>Title</th>
+										<th>Album</th>
+										<th>Artist</th>
+										<th>Filename</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="active">
+										<td colspan=4>Try search...</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
