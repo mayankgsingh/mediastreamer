@@ -20,7 +20,7 @@ function searchTitle() {
 			  row = row + "<td><a href=\"#\" class=\"medialnk\" id=\"" + value.docid + "\">" + value.title + "</a></td>";
 			  row = row + "<td>" + value.album + "</td>";
 			  row = row + "<td>" + value.artist + "</td>";
-			  row = row + "<td>" + value.fileName + "</td>";
+			  row = row + "<td class=\"hidden-xs hidden-sm\">" + value.fileName + "</td>";
 			  row = row + "</td></tr>";
 			  
 			  tblRes.append(row);
@@ -42,7 +42,7 @@ function searchTitle() {
 }
 
 function rebuildIndex() {
-	var url = "/filelocator/media/scan";
+	var url = appctx + "/media/scan";
 	$.get(url, function(data) {
 		var jsonRes = data.data;
 		var txthtml = "<b>Scan Result !!!</b>";
