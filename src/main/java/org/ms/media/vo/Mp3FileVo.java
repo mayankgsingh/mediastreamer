@@ -57,10 +57,4 @@ public class Mp3FileVo {
     this.filePath = filePath;
   }
 
-  @Override
-  public String toString() {
-    return "Mp3FileVo [docid=" + docid + ", fileName=" + fileName + ", filePath=" + filePath + ", title=" + title
-        + ", album=" + album + ", artist=" + artist + "]";
-  }
-  
 }

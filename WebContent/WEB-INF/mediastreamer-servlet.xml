@@ -16,16 +16,6 @@
  	
  	<mvc:resources mapping="/**" location="/static/" />
  	
- 	<!-- <mvc:view-controller path="/" view-name="/static/html/index.html"/> -->
- 	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix">
-            <value>/</value>
-        </property>
-        <property name="suffix">
-            <value>.html</value>
-        </property>
-	</bean> -->
- 	
  	<bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
 	</bean>
 	
@@ -36,14 +26,6 @@
 			</list>
 		</property>
 	</bean>
-    <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="${jdbc.driverClassName}" />
-        <property name="url" value="${jdbc.url}" />
-        <property name="username" value="${jdbc.username}" />
-        <property name="password" value="${jdbc.password}" />
-        <property name="initialSize" value="5" />
-        <property name="maxActive" value="10" />
-    </bean> -->
 
     <bean id="messageSource"
         class="org.springframework.context.support.ResourceBundleMessageSource">
