@@ -5,12 +5,9 @@ Once index is built and ready, users can start searching songs. The song will be
 
 Clicking song name in results section, will start audio streaming .
 ## Screenshots
-### Landing Page
-![Landing Page](https://raw.githubusercontent.com/mayankgsingh/mediastreamer/master/screenshots/LandingPage.jpg)
-### Search
-![Search](https://raw.githubusercontent.com/mayankgsingh/mediastreamer/master/screenshots/SearchAndEnter.jpg)
-### Select Song To Play
-![Select Song.png](https://raw.githubusercontent.com/mayankgsingh/mediastreamer/master/screenshots/SelectSongToPlay.jpg)
+|Landing Page|Search|Select to play|
+|--|--|--|
+|![Landing Page](https://raw.githubusercontent.com/mayankgsingh/mediastreamer/master/screenshots/LandingPage.jpg)|![Search](https://raw.githubusercontent.com/mayankgsingh/mediastreamer/master/screenshots/SearchAndEnter.jpg)|![Select Song.png](https://raw.githubusercontent.com/mayankgsingh/mediastreamer/master/screenshots/SelectSongToPlay.jpg)|
 
 ## How to...
 ### Pre-requisites
