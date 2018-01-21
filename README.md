@@ -4,6 +4,11 @@ MP3 Audio streamer for home network.<br />This application will scan your media 
 Once index is built and ready, users can start searching songs. The song will be searched simultaneously on multiple fields i.e. Song Name, Artist, Album and filename. Matched items will be displayed in results with hyperlink.
 
 Clicking song name in results section, will start audio streaming .
+## Screenshots
+![Landing Page](https://github.com/mayankgsingh/mediastreamer/tree/master/screenshots/LandingPage.png)
+![Search](https://github.com/mayankgsingh/mediastreamer/tree/master/screenshots/SearchAndEnter.png)
+![Select Song.png](https://github.com/mayankgsingh/mediastreamer/tree/master/screenshots/SelectSongToPlay.png)
+
 ## How to...
 ### Pre-requisites
  - JDK 1.7 or above.
