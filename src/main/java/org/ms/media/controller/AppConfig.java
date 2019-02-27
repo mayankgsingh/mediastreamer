@@ -2,15 +2,15 @@ package org.ms.media.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.env.Environment;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@WebAppConfiguration
 @EnableWebMvc
+@EnableAspectJAutoProxy
 public class AppConfig {
 
   @Autowired

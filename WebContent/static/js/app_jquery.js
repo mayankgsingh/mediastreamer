@@ -17,7 +17,7 @@ function searchTitle() {
 			$.each(jsonRes, function(key, value) {
 			  var row = "<tr class=\"active\">";
 			  //row = row + "<td><a href=\"#\" class=\"medialnk\">" + value.docid + "</a></td>";
-			  row = row + "<td><a href=\"#\" class=\"medialnk\" id=\"" + value.docid + "\">" + value.title + "</a></td>";
+			  row = row + "<td><a href=\"#\" class=\"medialnk\" id=\"" + value.docid + "\">" + (value.title==""?value.fileName:value.title) + "</a></td>";
 			  row = row + "<td>" + value.album + "</td>";
 			  row = row + "<td>" + value.artist + "</td>";
 			  row = row + "<td class=\"hidden-xs hidden-sm\">" + value.fileName + "</td>";
